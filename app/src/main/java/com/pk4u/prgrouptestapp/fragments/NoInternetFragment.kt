@@ -12,11 +12,7 @@ class NoInternetFragment : Fragment() {
     private lateinit var binding: FragmentNoInternetBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentNoInternetBinding.inflate(inflater,container,false)
+        binding.bReload.setOnClickListener { navigator().showWebView() }
         return binding.root
-    }
-
-    companion object {
-        fun newInstance() = NoInternetFragment()
-
     }
 }

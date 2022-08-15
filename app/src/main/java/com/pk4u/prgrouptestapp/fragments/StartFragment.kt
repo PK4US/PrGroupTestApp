@@ -20,12 +20,10 @@ class StartFragment : Fragment() {
     }
 
     private fun onOpenWebView() { navigator().showWebView() }
-
     private fun onExitPressed() { navigator().goBack() }
 
     companion object {
         @JvmStatic
         fun newInstance() = StartFragment()
-
     }
 }

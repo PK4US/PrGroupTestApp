@@ -7,8 +7,7 @@ fun Fragment.navigator(): Navigator {
 }
 
 interface Navigator {
-
     fun showWebView()
-
     fun goBack()
+    fun showNotInternet()
 }

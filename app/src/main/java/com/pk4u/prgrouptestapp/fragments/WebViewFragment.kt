@@ -8,19 +8,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import com.pk4u.prgrouptestapp.NetworkConnection
 import com.pk4u.prgrouptestapp.databinding.FragmentWebViewBinding
-
 
 class WebViewFragment : Fragment() {
 
     private lateinit var binding: FragmentWebViewBinding
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentWebViewBinding.inflate(inflater,container,false)
         opeWebView()
+        internet()
         return binding.root
     }
 
@@ -47,4 +49,15 @@ class WebViewFragment : Fragment() {
         })
     }
 
+    private fun internet(){
+        val networkConnection = context?.let { NetworkConnection(it) }
+        networkConnection?.observe(viewLifecycleOwner, Observer { isConnected ->
+            if (isConnected){
+                Toast.makeText(context, "is Connected", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(context, "is not Connected", Toast.LENGTH_SHORT).show()
+                navigator().showNotInternet()
+            }
+        })
+    }
 }
