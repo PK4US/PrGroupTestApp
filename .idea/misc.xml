@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Eugene/_Programming/AndroidProjects/PrGroupTestApp/app/src/main/res/layout/activity_main.xml" value="0.5364583333333334" />
+        <entry key="..\:/Eugene/_Programming/AndroidProjects/PrGroupTestApp/app/src/main/res/layout/fragment_no_internet.xml" value="0.34769736842105264" />
+        <entry key="..\:/Eugene/_Programming/AndroidProjects/PrGroupTestApp/app/src/main/res/layout/fragment_start.xml" value="0.2471590909090909" />
+        <entry key="..\:/Eugene/_Programming/AndroidProjects/PrGroupTestApp/app/src/main/res/layout/fragment_web_view.xml" value="0.34769736842105264" />
       </map>
     </option>
   </component>
