@@ -10,6 +10,7 @@ import android.os.Build
 import android.util.Log
 import androidx.lifecycle.LiveData
 
+@Suppress("DEPRECATION")
 class NetworkConnection(private val context: Context): LiveData<Boolean>() {
 
     private var conManager: ConnectivityManager =
