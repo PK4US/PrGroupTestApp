@@ -52,10 +52,7 @@ class WebViewFragment : Fragment() {
     private fun internet(){
         val networkConnection = context?.let { NetworkConnection(it) }
         networkConnection?.observe(viewLifecycleOwner, Observer { isConnected ->
-            if (isConnected){
-                Toast.makeText(context, "is Connected", Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(context, "is not Connected", Toast.LENGTH_SHORT).show()
+            if (!isConnected){
                 navigator().showNotInternet()
             }
         })
